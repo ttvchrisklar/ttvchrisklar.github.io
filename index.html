@@ -86,30 +86,30 @@
     <script>
         var imageContainer = document.getElementById("image");
         const images = [
-            "Page_1_01.jpg",
-            "Page_1_02.jpg",
-            "Page_1_03.jpg",
-            "Page_1_04.jpg",
-            "Page_1_05.jpg",
-            "Page_1_06.jpg",
-            "Page_1_07.jpg",
-            "Page_1_08.jpg",
-            "Page_1_09.jpg",
-            "Page_1_10.jpg",
-            "Page_1_11.jpg",
-            "Page_1_12.jpg",
-            "Page_1_13.jpg",
-            "Page_1_14.jpg",
-            "Page_1_15.jpg",
-            "Page_1_16.jpg",
-            "Page_1_17.jpg",
-            "Page_1_18.jpg",
-            "Page_1_19.jpg",
-            "Page_1_20.jpg",
-            "Page_1_21.jpg",
-            "Page_1_22.jpg",
-            "Page_1_23.jpg"
-        ], prefix = "https://ttvchrisklar.github.io/";
+            "page_1_01.jpg",
+            "page_1_02.jpg",
+            "page_1_03.jpg",
+            "page_1_04.jpg",
+            "page_1_05.jpg",
+            "page_1_06.jpg",
+            "page_1_07.jpg",
+            "page_1_08.jpg",
+            "page_1_09.jpg",
+            "page_1_10.jpg",
+            "page_1_11.jpg",
+            "page_1_12.jpg",
+            "page_1_13.jpg",
+            "page_1_14.jpg",
+            "page_1_15.jpg",
+            "page_1_16.jpg",
+            "page_1_17.jpg",
+            "page_1_18.jpg",
+            "page_1_19.jpg",
+            "page_1_20.jpg",
+            "page_1_21.jpg",
+            "page_1_22.jpg",
+            "page_1_23.jpg"
+        ], prefix = ""; //"https://ttvchrisklar.github.io/";
         let imigeselected = 0, loadedImgs = [];
         images.forEach((imageUrl) => {
             var newImg = new Image();
@@ -118,13 +118,13 @@
         });
 
         function NextImige() {
-            if (imigeselected == loadedImgs.length) return;
+            if (imigeselected == loadedImgs.length - 1) return;
             imigeselected += 1;
             changeImg(imigeselected);
         }
 
         function LastImige() {
-            if (imigeselected == 1) return;
+            if (imigeselected == 0) return;
             imigeselected -= 1;
             changeImg(imigeselected);
         }
@@ -132,7 +132,7 @@
         function changeImg(imgNumber) {
 
             imageContainer.innerHTML = "";
-            pagenum.innerHTML = `${imgNumber + 1}/${loadedImgs.length - 1}`;
+            pagenum.innerHTML = `${imgNumber + 1}/${loadedImgs.length}`;
             imageContainer.appendChild(loadedImgs[imgNumber]);
         }
 
