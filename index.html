@@ -11,7 +11,7 @@
     <style>
         .button {
             display: inline-block;
-            padding: 15px 15px;
+            padding: 5px 15px;
             font-size: 12px;
             cursor: pointer;
             text-align: center;
@@ -21,7 +21,8 @@
             background-color: #4CAF50;
             border: none;
             border-radius: 15px;
-            box-shadow: 0 9px #999;
+            margin-bottom: 80px;
+            box-shadow: 1px 2px #999;
         }
 
         .button:hover {
@@ -30,7 +31,7 @@
 
         .button:active {
             background-color: #3e8e41;
-            box-shadow: 0 5px #666;
+            box-shadow: 0 2px #666;
             transform: translateY(4px);
         }
 
@@ -54,19 +55,22 @@
             height: 100%;
             flex-direction: column;
             justify-content: space-between;
+            background-color: black; 
+            color: white; 
+            text-align: center;
         }
 
         html {
             height: 98%;
         }
     </style>
-    <body style="background-color: black; color: white; text-align: center;">
+    <body>
         <h1> deathtrip contribution by CCOI.</h1>
 
         <div id="image" alt="page 1">
             <img src="page_1_01.jpg" alt="" srcset="">
         </div>
-
+        <div>
         <p id="pagenum">1/23</p>
         <span>
             <button class="button" onclick="LastImige()">Prev
@@ -74,16 +78,13 @@
             <button class="button" onclick="NextImige()">Next
             </button>
         </span>
-
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-
+        </div>
+        <div>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/EcSNv6HwRwI" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
-
+        </div>
 
 
 
