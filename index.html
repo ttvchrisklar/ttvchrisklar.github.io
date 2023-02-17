@@ -117,32 +117,33 @@
             "page_1_22.jpg",
             "page_1_23.jpg"
         ], prefix = "https://ttvchrisklar.github.io/";
+        //pre lods the imiges 
         let imigeselected = 0, loadedImgs = [];
+
         images.forEach((imageUrl) => {
             var newImg = new Image();
             newImg.src = prefix + imageUrl;
             loadedImgs.push(newImg);
         });
-
+        //sets the imige urls to be capeble to lode on github
         function NextImige() {
             if (imigeselected == loadedImgs.length - 1) return;
             imigeselected += 1;
             changeImg(imigeselected);
         }
-
+        //sets next imige when you click on button "next"
         function LastImige() {
             if (imigeselected == 0) return;
             imigeselected -= 1;
             changeImg(imigeselected);
         }
-
+        //sets last imige when you click on button "last"
         function changeImg(imgNumber) {
 
             imageContainer.innerHTML = "";
             pagenum.innerHTML = `${imgNumber + 1}/${loadedImgs.length}`;
             imageContainer.appendChild(loadedImgs[imgNumber]);
         }
-
+        //sets the imige on the screen. 
     </script>
-
 </html>
